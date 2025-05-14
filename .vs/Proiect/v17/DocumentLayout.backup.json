@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\UNI\\Simulare-sistem-de-navigare\\",
+  "WorkspaceRootPath": "C:\\IP\\Proiect\\Proiect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|D:\\UNI\\Simulare-sistem-de-navigare\\proiect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|C:\\IP\\Proiect\\Proiect\\proiect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|solutionrelative:proiect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|c:\\ip\\proiect\\proiect\\proiect\\routecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|solutionrelative:proiect\\routecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|c:\\ip\\proiect\\proiect\\proiect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|solutionrelative:proiect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|d:\\uni\\simulare-sistem-de-navigare\\proiect\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|solutionrelative:proiect\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|d:\\uni\\simulare-sistem-de-navigare\\proiect\\routingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|C:\\IP\\Proiect\\Proiect\\proiect\\routingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|solutionrelative:proiect\\routingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|D:\\UNI\\Simulare-sistem-de-navigare\\proiect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|solutionrelative:proiect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|C:\\IP\\Proiect\\Proiect\\proiect\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}|Proiect\\Proiect.csproj|solutionrelative:proiect\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\Form1.cs",
+              "DocumentMoniker": "C:\\IP\\Proiect\\Proiect\\Proiect\\Form1.cs",
               "RelativeDocumentMoniker": "Proiect\\Form1.cs",
-              "ToolTip": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\Form1.cs",
+              "ToolTip": "C:\\IP\\Proiect\\Proiect\\Proiect\\Form1.cs",
               "RelativeToolTip": "Proiect\\Form1.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAiwEcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAALgAAAAAAAAAAAAkwMcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T15:08:00.534Z",
               "IsPinned": true,
@@ -45,36 +49,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RouteCalculator.cs",
+              "DocumentMoniker": "C:\\IP\\Proiect\\Proiect\\Proiect\\RouteCalculator.cs",
+              "RelativeDocumentMoniker": "Proiect\\RouteCalculator.cs",
+              "ToolTip": "C:\\IP\\Proiect\\Proiect\\Proiect\\RouteCalculator.cs",
+              "RelativeToolTip": "Proiect\\RouteCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:25:51.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\IP\\Proiect\\Proiect\\Proiect\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Proiect\\Form1.Designer.cs",
-              "ToolTip": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\Form1.Designer.cs",
+              "ToolTip": "C:\\IP\\Proiect\\Proiect\\Proiect\\Form1.Designer.cs",
               "RelativeToolTip": "Proiect\\Form1.Designer.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAowI4AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowMcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T15:31:49.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RoutingService.cs",
-              "DocumentMoniker": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\RoutingService.cs",
+              "DocumentMoniker": "C:\\IP\\Proiect\\Proiect\\Proiect\\RoutingService.cs",
               "RelativeDocumentMoniker": "Proiect\\RoutingService.cs",
-              "ToolTip": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\RoutingService.cs",
+              "ToolTip": "C:\\IP\\Proiect\\Proiect\\Proiect\\RoutingService.cs",
               "RelativeToolTip": "Proiect\\RoutingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAswFQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T19:16:31.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\Form1.cs",
+              "DocumentMoniker": "C:\\IP\\Proiect\\Proiect\\Proiect\\Form1.cs",
               "RelativeDocumentMoniker": "Proiect\\Form1.cs",
-              "ToolTip": "D:\\UNI\\Simulare-sistem-de-navigare\\Proiect\\Form1.cs [Design]",
+              "ToolTip": "C:\\IP\\Proiect\\Proiect\\Proiect\\Form1.cs [Design]",
               "RelativeToolTip": "Proiect\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T15:05:12.829Z",

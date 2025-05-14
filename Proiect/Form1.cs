@@ -1,11 +1,13 @@
-﻿using System;
-using System.Windows.Forms; 
-using GMap.NET;           
+﻿using GMap.NET;           
 using GMap.NET.MapProviders; 
 using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Drawing;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
+using System.Windows.Forms; 
 
 
 
@@ -30,8 +32,8 @@ namespace Proiect
 
                 gmapControl.MapProvider = GMapProviders.OpenStreetMap;
 
-                gmapControl.MinZoom = 1;  
-                gmapControl.MaxZoom = 18; 
+                gmapControl.MinZoom = 1;
+                gmapControl.MaxZoom = 18;
 
                 gmapControl.Zoom = 6;
 
@@ -39,17 +41,17 @@ namespace Proiect
                 gmapControl.DragButton = MouseButtons.Left;
 
 
-                gmapControl.Position = new PointLatLng(45.9432, 24.9668); 
+                gmapControl.Position = new PointLatLng(45.9432, 24.9668);
 
 
                 gmapControl.ShowCenter = false;
 
                 if (gmapControl.Overlays.Count == 0)
                 {
-                    markersOverlay = new GMapOverlay("markers"); 
+                    markersOverlay = new GMapOverlay("markers");
                     gmapControl.Overlays.Add(markersOverlay);
 
-                    routesOverlay = new GMapOverlay("routes");  
+                    routesOverlay = new GMapOverlay("routes");
                     gmapControl.Overlays.Add(routesOverlay);
                 }
 
@@ -67,10 +69,6 @@ namespace Proiect
 
         }
 
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-        }
         //functia care preia coordonatele de la adresa 
         private async Task<PointLatLng?> GetCoordinatesAsync(string address)
         {
@@ -111,9 +109,8 @@ namespace Proiect
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            // Verificăm dacă ambele locații sunt selectate 
-            var coordPlecare = await GetCoordinatesAsync(btn_plecare.Text);
-            var coordSosire = await GetCoordinatesAsync(btn_sosire.Text);
+            var coordPlecare = await GetCoordinatesAsync(textBox1.Text);
+            var coordSosire = await GetCoordinatesAsync(textBox2.Text);
 
             if (coordPlecare == null || coordSosire == null)
             {
@@ -121,9 +118,33 @@ namespace Proiect
                 return;
             }
 
-            MessageBox.Show($"Coordonatele plecare: {coordPlecare.Value.Lat}, {coordPlecare.Value.Lng}\n" +
-                            $"Coordonatele sosire: {coordSosire.Value.Lat}, {coordSosire.Value.Lng}");
-            // --------------------------------------
+            markersOverlay.Markers.Clear();
+            routesOverlay.Routes.Clear();
+
+            markersOverlay.Markers.Add(new GMarkerGoogle(coordPlecare.Value, GMarkerGoogleType.green));
+            markersOverlay.Markers.Add(new GMarkerGoogle(coordSosire.Value, GMarkerGoogleType.red));
+
+            var routingService = new RoutingService();
+            var routes = await routingService.GetRoutesAsync(coordPlecare.Value, coordSosire.Value);
+
+            if (routes.Count == 0)
+            {
+                MessageBox.Show("Nu a putut fi găsită nicio rută!", "Atenție!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int colorStep = 255 / routes.Count;
+            for (int i = 0; i < routes.Count; i++)
+            {
+                var route = routes[i];
+                var routeLine = new GMapRoute(route.Geometry, $"Ruta {i + 1}")
+                {
+                    Stroke = new Pen(Color.FromArgb(255, i * colorStep, 0, 255 - i * colorStep), 3)
+                };
+                routesOverlay.Routes.Add(routeLine);
+            }
+
+            gmapControl.ZoomAndCenterRoutes("routes");
         }
     }
 }

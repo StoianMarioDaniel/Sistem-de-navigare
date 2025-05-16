@@ -40,6 +40,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.gmapControl = new GMap.NET.WindowsForms.GMapControl();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -146,7 +148,7 @@
             this.gmapControl.GrayScaleMode = false;
             this.gmapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gmapControl.LevelsKeepInMemory = 5;
-            this.gmapControl.Location = new System.Drawing.Point(59, 194);
+            this.gmapControl.Location = new System.Drawing.Point(59, 168);
             this.gmapControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gmapControl.MarkersEnabled = true;
             this.gmapControl.MaxZoom = 2;
@@ -165,11 +167,32 @@
             this.gmapControl.TabIndex = 11;
             this.gmapControl.Zoom = 0D;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(313, 575);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(408, 84);
+            this.listBox1.TabIndex = 12;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(310, 545);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Alegeți ruta!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1171, 601);
+            this.ClientSize = new System.Drawing.Size(1119, 678);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.gmapControl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox5);
@@ -205,6 +228,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button1;
         private GMap.NET.WindowsForms.GMapControl gmapControl;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
 

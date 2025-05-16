@@ -4,10 +4,12 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static GMap.NET.Entity.OpenStreetMapRouteEntity;
 
 
 
@@ -15,8 +17,10 @@ using System.Windows.Forms;
 /*********************************************************************************************
  *                                                                                           * 
  *  File:        RouteCalculator.cs                                                          *
- *  Copyright:   (c) 2025 Stoian Mario-Daniel, Chiriac Raluca                                *
- *  E-mail:      mario-daniel.stoian@student.tuiasi.ro, raluca.chiriac@student.tuiasi.ro     *
+ *  Copyright:   (c) 2025 Stoian Mario-Daniel, Chiriac Raluca-Ștefania, Chilimon Ana-Maria   *
+ *  E-mail:      mario-daniel.stoian@student.tuiasi.ro,                                      *
+ *               raluca-stefania.chiriac@student.tuiasi.ro,                                  *
+ *               ana-maria.chilimon@student.tuiasi.ro                                        *
  *                                                                                           *
  *********************************************************************************************/
 
@@ -27,6 +31,7 @@ namespace Proiect
     {
         private GMapOverlay markersOverlay;
         private GMapOverlay routesOverlay;
+        private List<RouteInfo> routes;
 
         public Form1()
         {
@@ -111,6 +116,10 @@ namespace Proiect
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            //--------------CAM----------------
+            listBox1.Items.Clear();
+            //--------------CAM----------------/
+
             var coordPlecare = await GetCoordinatesAsync(textBox2.Text);
             var coordSosire = await GetCoordinatesAsync(textBox1.Text);
 
@@ -139,7 +148,7 @@ namespace Proiect
             markersOverlay.Markers.Add(new GMarkerGoogle(coordSosire.Value, GMarkerGoogleType.red));
 
             var routingService = new RoutingService();
-            var routes = await routingService.GetRoutesAsync(coordPlecare.Value, coordSosire.Value);
+            routes = await routingService.GetRoutesAsync(coordPlecare.Value, coordSosire.Value);
 
             if (routes == null || routes.Count == 0)
             {
@@ -219,6 +228,12 @@ namespace Proiect
                              new Pen(Color.FromArgb(255, Math.Min(255, i * colorStep), Math.Max(0, 100 - i * (colorStep / 2)), Math.Max(0, 255 - i * colorStep)), 3)
                 };
                 routesOverlay.Routes.Add(routeLine);
+
+                //--------------CAM----------------
+                string colorName = ColorName.GetClosestKnownColorName(routeLine.Stroke.Color);
+                string routeName = "Ruta " + (i + 1).ToString() + " (" + colorName + ")";
+                listBox1.Items.Add(routeName);
+                //--------------CAM----------------/
             }
 
             if (routes.Count > 0)
@@ -231,5 +246,94 @@ namespace Proiect
                 gmapControl.Zoom = 6;
             }
         }
+
+        //--------------CAM----------------
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string curItem = listBox1.SelectedItem.ToString();
+            int index = listBox1.FindString(curItem);
+            if (index == -1)
+            {
+                MessageBox.Show("Item is not available in ListBox1");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Ruta selectată este ruta " + (index + 1).ToString(), "Rută selectată");
+            }
+            for (int i = 0; i < routesOverlay.Routes.Count; i++)
+            {
+                GMapRoute route = routesOverlay.Routes[i];
+                if(i == index)
+                {
+                    route.Stroke.Color = Color.Red;
+                    route.Stroke.Width = 3;
+                }
+                else
+                {
+                    route.Stroke.Color = Color.Blue;
+                    route.Stroke.Width = 1;
+                }
+            }
+            gmapControl.Refresh();
+
+            //---------SMD-----------
+            double averageSpeedKmH = 0;
+            bool canCalculateMetrics = false;
+            string originalSpeedInput = textBox3.Text;
+
+            if (string.IsNullOrWhiteSpace(originalSpeedInput))
+            {
+                averageSpeedKmH = 60.0;
+                canCalculateMetrics = true;
+            }
+            else if (double.TryParse(originalSpeedInput, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out double parsedSpeed) && parsedSpeed > 0)
+            {
+                averageSpeedKmH = parsedSpeed;
+                canCalculateMetrics = true;
+            }
+
+            if (canCalculateMetrics)
+            {
+
+                textBox3.Text = averageSpeedKmH.ToString("G", System.Globalization.CultureInfo.InvariantCulture);
+
+                const double fuelConsumptionRateL100Km = 7.5;
+                var routeInfo = routes[index];
+                try
+                {
+                    var metrics = RouteCalculator.CalculateRouteMetrics(routeInfo, averageSpeedKmH, fuelConsumptionRateL100Km);
+
+                    TimeSpan calculatedTime = metrics.CalculatedEstimatedTime;
+                    string formattedCalculatedTime = $"{(int)calculatedTime.TotalHours}h {calculatedTime.Minutes:D2}m";
+                    textBox4.Text = formattedCalculatedTime;
+
+                    textBox5.Text = metrics.EstimatedConsumptionLiters.ToString("F2", System.Globalization.CultureInfo.InvariantCulture) + " L";
+
+                    TimeSpan apiTime = metrics.ApiProvidedDuration;
+                    string formattedApiTime = $"{(int)apiTime.TotalHours}h {apiTime.Minutes:D2}m {apiTime.Seconds:D2}s";
+                    Console.WriteLine($"--- Detalii Rută (Prima) ---");
+                    Console.WriteLine($"Distanță: {metrics.DistanceKm.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)} km");
+                    Console.WriteLine($"Timp estimat (calculat cu {averageSpeedKmH.ToString("G", System.Globalization.CultureInfo.InvariantCulture)} km/h): {formattedCalculatedTime}");
+                    Console.WriteLine($"Durată (din API OSRM): {formattedApiTime}");
+                    Console.WriteLine($"Consum estimat ({fuelConsumptionRateL100Km} L/100km): {metrics.EstimatedConsumptionLiters.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)} L");
+                    Console.WriteLine($"-----------------------------");
+                }
+                catch (ArgumentOutOfRangeException exMetrics)
+                {
+                    MessageBox.Show($"Eroare la calcularea metricilor: {exMetrics.Message}", "Eroare Calcul", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                }
+                catch (Exception exGen)
+                {
+                    MessageBox.Show($"O eroare neașteptată la calcularea metricilor: {exGen.Message}", "Eroare Calcul General", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox4.Text = "";
+                    textBox5.Text = "";
+                }
+            }
+            //---------SMD-----------/
+        }
+        //--------------CAM----------------/
     }
 }

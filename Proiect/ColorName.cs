@@ -12,20 +12,8 @@ using System.Threading.Tasks;
  *  Copyright:   (c) 2025 Chilimon Ana-Maria                              *
  *  E-mail:      ana-maria.chilimon@student.tuiasi.ro                     *
  *                                                                        *
- *  Această clasă statică, `RouteCalculator`, oferă funcționalități       *
- *  pentru calcularea diverselor metrici asociate unei rute de            *
- *  navigație. Principala sa metodă, `CalculateRouteMetrics`, primește    *
- *  informații despre rută (distanță și durată furnizate de un API),      *
- *  o viteză medie de deplasare și o rată de consum de combustibil.       *
- *  Pe baza acestor date, metoda calculează și returnează:                *
- *    - Distanța totală a rutei în kilometri.                             *
- *    - Timpul estimat de parcurgere, calculat pe baza distanței și       *
- *      a vitezei medii.                                                  *
- *    - Durata călătoriei furnizată de API (convertită în TimeSpan).      *
- *    - Consumul estimat de combustibil pentru întreaga rută.             *
- *  Rezultatele sunt încapsulate într-un obiect de tip `CalculationResult`*
- *  Clasa include, de asemenea, validări de bază pentru viteza medie și   *
- *  rata de consum introduse.                                             *
+ *  Această clasă statică, `ColorName`, este folosita pentru a gasi cel   *
+ * cel mai apropiat nume de culoare, pentru o culoare transmita ca RGB.   *
  *                                                                        *
  **************************************************************************/
 

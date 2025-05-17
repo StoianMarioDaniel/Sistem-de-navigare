@@ -261,6 +261,7 @@ namespace Proiect
             {
                 MessageBox.Show("Ruta selectată este ruta " + (index + 1).ToString(), "Rută selectată");
             }
+            listBox1.Items.Clear();
             for (int i = 0; i < routesOverlay.Routes.Count; i++)
             {
                 GMapRoute route = routesOverlay.Routes[i];
@@ -274,6 +275,9 @@ namespace Proiect
                     route.Stroke.Color = Color.Blue;
                     route.Stroke.Width = 1;
                 }
+                string colorName = ColorName.GetClosestKnownColorName(route.Stroke.Color);
+                string routeName = "Ruta " + (i + 1).ToString() + " (" + colorName + ")";
+                listBox1.Items.Add(routeName);
             }
             gmapControl.Refresh();
 

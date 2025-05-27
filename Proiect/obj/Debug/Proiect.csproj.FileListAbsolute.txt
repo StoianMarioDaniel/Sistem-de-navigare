@@ -205,3 +205,4 @@ D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\ColorNameDLL.pdb
 D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RouteCalculatorDLL.pdb
 D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RoutingServiceDLL.pdb
 D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RoutingServiceDLL.dll.config
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\Sistem-Simulare-de-Navigare_Help.chm

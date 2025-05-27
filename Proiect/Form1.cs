@@ -389,7 +389,7 @@ namespace Proiect
         {
             try
             {
-                string helpFilePath = @"D:\UNI\Simulare-sistem-de-navigare\Sistem-Simulare-de-Navigare_Help.chm";
+                string helpFilePath = System.IO.Path.Combine(Application.StartupPath, "Sistem-Simulare-de-Navigare_Help.chm");
 
                 if (System.IO.File.Exists(helpFilePath))
                 {
@@ -397,10 +397,8 @@ namespace Proiect
                 }
                 else
                 {
-                    ShowUserMessage("Fișierul de ajutor nu a fost găsit la locația specificată.",
-                                    "Eroare Help",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                    MessageBox.Show("Fișierul de ajutor nu a fost găsit la locația:\n" + helpFilePath,
+                                    "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

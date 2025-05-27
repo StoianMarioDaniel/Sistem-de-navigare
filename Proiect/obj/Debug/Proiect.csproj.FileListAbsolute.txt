@@ -198,3 +198,10 @@ C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\Proiect\bin\Debug\RoutingServic
 C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\Proiect\bin\Debug\ColorNameDLL.pdb
 C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\Proiect\bin\Debug\RouteCalculatorDLL.dll
 C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\Proiect\bin\Debug\RouteCalculatorDLL.pdb
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\ColorNameDLL.dll
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RouteCalculatorDLL.dll
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RoutingServiceDLL.dll
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\ColorNameDLL.pdb
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RouteCalculatorDLL.pdb
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RoutingServiceDLL.pdb
+D:\UNI\Simulare-sistem-de-navigare\Proiect\bin\Debug\RoutingServiceDLL.dll.config

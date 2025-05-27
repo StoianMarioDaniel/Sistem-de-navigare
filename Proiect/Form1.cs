@@ -93,6 +93,7 @@ namespace Proiect
             _currentState.Enter();
         }
 
+        //---------GMI-----------/
         public async Task<PointLatLng?> GetCoordinatesForAddressAsync(string address) 
         {
             if (string.IsNullOrWhiteSpace(address))
@@ -134,6 +135,7 @@ namespace Proiect
                 await _currentState.HandleCalculateRouteClickedAsync();
             }
         }
+        //---------GMI-----------/
 
         public async Task TriggerRouteCalculationAsync()
         {
@@ -186,6 +188,7 @@ namespace Proiect
             //---------SMD-----------/
         }
 
+        //---------GMI-----------/
         public void DisplayMarkers(PointLatLng start, PointLatLng end)
         {
             _markersOverlay.Markers.Clear();
@@ -193,6 +196,7 @@ namespace Proiect
             _markersOverlay.Markers.Add(new GMarkerGoogle(end, GMarkerGoogleType.red));
             gmapControl.Refresh();
         }
+        //---------GMI-----------/
 
         public void PopulateRouteListBox()
         {
@@ -379,5 +383,34 @@ namespace Proiect
         {
             MessageBox.Show(this, message, caption, buttons, icon);
         }
+
+        //---------GMI-----------/
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string helpFilePath = @"D:\UNI\Simulare-sistem-de-navigare\Sistem-Simulare-de-Navigare_Help.chm";
+
+                if (System.IO.File.Exists(helpFilePath))
+                {
+                    Help.ShowHelp(this, helpFilePath);
+                }
+                else
+                {
+                    ShowUserMessage("Fișierul de ajutor nu a fost găsit la locația specificată.",
+                                    "Eroare Help",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowUserMessage($"A apărut o eroare la deschiderea fișierului de ajutor: {ex.Message}",
+                                "Eroare Help",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+        //---------GMI-----------/
     }
 }

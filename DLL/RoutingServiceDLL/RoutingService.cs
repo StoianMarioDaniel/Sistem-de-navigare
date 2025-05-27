@@ -1,4 +1,13 @@
-﻿using GMap.NET;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        RoutingService.cs                                        *
+ *  Copyright:   (c) 2025 Mihnea-Ioan Galusca                             *
+ *  E-mail:      mihnea-ioan.galusca@student.tuiasi.ro                    *
+ *                                                                        *
+ *                                                                        *
+ **************************************************************************/
+
+using GMap.NET;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +17,9 @@ using System.Threading.Tasks;
 
 namespace RoutingServiceDLL
 {
+    /// <summary>
+    /// Reprezintă datele specifice despre o ruta precum geometria, distanta si durata.
+    /// </summary>
     public class RouteInfo
     {
         public List<PointLatLng> Geometry { get; set; }
@@ -15,10 +27,15 @@ namespace RoutingServiceDLL
         public double Duration { get; set; }
     }
 
+    /// <summary>
+    /// Aceasta este clasa ce se ocupa cu apelarea serviciului OSRM pentru a obtine ruta intre 2 locatii
+    /// </summary>
     public class RoutingService
     {
         private static readonly HttpClient httpClient = new HttpClient();
-
+        /// <summary>
+        /// Trimite o cerere către OSRM pentru a obține una sau mai multe rute între două puncte.
+        /// </summary>
         public async Task<List<RouteInfo>> GetRoutesAsync(PointLatLng start, PointLatLng end)
         {
             var url = $"http://router.project-osrm.org/route/v1/driving/{start.Lng},{start.Lat};{end.Lng},{end.Lat}?overview=full&alternatives=true&geometries=polyline";
@@ -54,6 +71,10 @@ namespace RoutingServiceDLL
             }
             return routes;
         }
+
+        /// <summary>
+        /// Decodează un string de tip polyline (Google Encoded Polyline Algorithm Format) într-o listă de coordonate.
+        /// </summary>
         private List<PointLatLng> DecodePolyline(string encoded)
         {
             if (string.IsNullOrEmpty(encoded))
@@ -84,7 +105,7 @@ namespace RoutingServiceDLL
                 do
                 {
                     if (index >= len)
-                        return poly; // 🔒 protecție la a doua buclă
+                        return poly; 
 
                     b = encoded[index++] - 63;
                     result |= (b & 0x1F) << shift;

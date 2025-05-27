@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proiect", "Proiect\Proiect.csproj", "{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGPS", "UnitTestGPS\UnitTestGPS.csproj", "{26816769-D8CA-407E-9B4D-FEA1480CF546}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F46EDF73-C3C8-4AAC-8DCD-0D533E65EE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26816769-D8CA-407E-9B4D-FEA1480CF546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26816769-D8CA-407E-9B4D-FEA1480CF546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26816769-D8CA-407E-9B4D-FEA1480CF546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26816769-D8CA-407E-9B4D-FEA1480CF546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

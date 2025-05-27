@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\UNI\\Simulare-sistem-de-navigare\\DLL\\RouteCalculatorDLL\\",
+  "WorkspaceRootPath": "C:\\IP\\Proiect\\Proiect\\DLL\\RouteCalculatorDLL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8266E1CF-6873-406B-98B2-8C9C2FAD20B4}|RouteCalculatorDLL.csproj|d:\\uni\\simulare-sistem-de-navigare\\dll\\routecalculatordll\\routecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8266E1CF-6873-406B-98B2-8C9C2FAD20B4}|RouteCalculatorDLL.csproj|c:\\ip\\proiect\\proiect\\dll\\routecalculatordll\\routecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8266E1CF-6873-406B-98B2-8C9C2FAD20B4}|RouteCalculatorDLL.csproj|solutionrelative:routecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RouteCalculator.cs",
-              "DocumentMoniker": "D:\\UNI\\Simulare-sistem-de-navigare\\DLL\\RouteCalculatorDLL\\RouteCalculator.cs",
+              "DocumentMoniker": "C:\\IP\\Proiect\\Proiect\\DLL\\RouteCalculatorDLL\\RouteCalculator.cs",
               "RelativeDocumentMoniker": "RouteCalculator.cs",
-              "ToolTip": "D:\\UNI\\Simulare-sistem-de-navigare\\DLL\\RouteCalculatorDLL\\RouteCalculator.cs",
+              "ToolTip": "C:\\IP\\Proiect\\Proiect\\DLL\\RouteCalculatorDLL\\RouteCalculator.cs",
               "RelativeToolTip": "RouteCalculator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwCQAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T19:05:22.808Z",
               "EditorCaption": ""

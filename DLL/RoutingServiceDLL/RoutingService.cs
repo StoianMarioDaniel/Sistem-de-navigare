@@ -3,7 +3,34 @@
  *  File:        RoutingService.cs                                        *
  *  Copyright:   (c) 2025 Mihnea-Ioan Galusca                             *
  *  E-mail:      mihnea-ioan.galusca@student.tuiasi.ro                    *
- *                                                                        *
+ *  Description: Acest fișier definește clasa `RoutingService` și clasa   *
+ *               de date `RouteInfo`, responsabile pentru interacțiunea   *
+ *               cu serviciul de rutare Open Source Routing Machine (OSRM)*
+ *               și procesarea datelor de rută.                           *
+ *               - `RouteInfo`: O clasă simplă de tip container (POCO)    *
+ *                 pentru a stoca informațiile despre o rută individuală, *
+ *                 incluzând geometria (o listă de puncte `PointLatLng`), *
+ *                 distanța totală (în metri) și durata estimată          *
+ *                 (în secunde).                                          *
+ *               - `RoutingService`: Clasa principală care gestionează    *
+ *                 comunicarea cu API-ul OSRM.                            *
+ *                 - `GetRoutesAsync`: Metodă asincronă care construiește *
+ *                   și trimite o cerere HTTP GET către serverul public   *
+ *                   OSRM pentru a obține rute (inclusiv alternative)     *
+ *                   între două coordonate geografice (start și end).     *
+ *                   Parsează răspunsul JSON primit de la OSRM, extrage   *
+ *                   informațiile relevante pentru fiecare rută (distanță,*
+ *                   durată, geometrie codificată) și le transformă într-o*
+ *                   listă de obiecte `RouteInfo`.                        *
+ *                   Aruncă excepții în caz de erori de comunicare cu     *
+ *                   OSRM sau dacă răspunsul API-ului nu este valid.      *
+ *                 - `DecodePolyline`: Metodă privată utilizată pentru a  *
+ *                   decoda șirul de caractere al geometriei rutei        *
+ *                   (format polyline encodat Google) într-o listă de     *
+ *                   coordonate `PointLatLng`, care pot fi apoi folosite  *
+ *                   pentru a desena ruta pe hartă.                       *
+ *               Clasa utilizează `HttpClient` pentru cererile HTTP și    *
+ *               `System.Text.Json` pentru parsarea răspunsurilor JSON.   *
  *                                                                        *
  **************************************************************************/
 

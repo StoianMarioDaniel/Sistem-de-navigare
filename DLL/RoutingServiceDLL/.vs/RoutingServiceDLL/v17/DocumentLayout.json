@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\UNI\\Simulare-sistem-de-navigare\\DLL\\RoutingServiceDLL\\",
+  "WorkspaceRootPath": "C:\\IP\\Proiect\\Proiect\\DLL\\RoutingServiceDLL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D35D2AA-72AC-4D21-A2D1-2B3B3BD9E832}|RoutingServiceDLL.csproj|d:\\uni\\simulare-sistem-de-navigare\\dll\\routingservicedll\\routingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1D35D2AA-72AC-4D21-A2D1-2B3B3BD9E832}|RoutingServiceDLL.csproj|c:\\ip\\proiect\\proiect\\dll\\routingservicedll\\routingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D35D2AA-72AC-4D21-A2D1-2B3B3BD9E832}|RoutingServiceDLL.csproj|solutionrelative:routingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RoutingService.cs",
-              "DocumentMoniker": "D:\\UNI\\Simulare-sistem-de-navigare\\DLL\\RoutingServiceDLL\\RoutingService.cs",
+              "DocumentMoniker": "C:\\IP\\Proiect\\Proiect\\DLL\\RoutingServiceDLL\\RoutingService.cs",
               "RelativeDocumentMoniker": "RoutingService.cs",
-              "ToolTip": "D:\\UNI\\Simulare-sistem-de-navigare\\DLL\\RoutingServiceDLL\\RoutingService.cs",
+              "ToolTip": "C:\\IP\\Proiect\\Proiect\\DLL\\RoutingServiceDLL\\RoutingService.cs",
               "RelativeToolTip": "RoutingService.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAqwCUAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T18:19:49.445Z",
               "EditorCaption": ""

@@ -19,10 +19,12 @@ using RouteCalculatorDLL;
 /*********************************************************************************************
  *                                                                                           * 
  *  File:        RouteCalculator.cs                                                          *
- *  Copyright:   (c) 2025 Stoian Mario-Daniel, Chiriac Raluca-Ștefania, Chilimon Ana-Maria   *
+ *  Copyright:   (c) 2025 Stoian Mario-Daniel, Chiriac Raluca-Ștefania, Chilimon Ana-Maria,  *
+ *                        Galusca Mihnea-Ioan                                                *
  *  E-mail:      mario-daniel.stoian@student.tuiasi.ro,                                      *
  *               raluca-stefania.chiriac@student.tuiasi.ro,                                  *
- *               ana-maria.chilimon@student.tuiasi.ro                                        *
+ *               ana-maria.chilimon@student.tuiasi.ro,                                       *
+ *               mihnea-ioan.galusca@student.tuiasi.ro                                       *
  *                                                                                           *
  *********************************************************************************************/
 

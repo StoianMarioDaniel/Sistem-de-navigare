@@ -1,0 +1,6 @@
+C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\DLL\ColorNameDLL\bin\Debug\ColorNameDLL.dll
+C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\DLL\ColorNameDLL\bin\Debug\ColorNameDLL.pdb
+C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\DLL\ColorNameDLL\obj\Debug\ColorNameDLL.csproj.AssemblyReference.cache
+C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\DLL\ColorNameDLL\obj\Debug\ColorNameDLL.csproj.CoreCompileInputs.cache
+C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\DLL\ColorNameDLL\obj\Debug\ColorNameDLL.dll
+C:\Users\Ana\Desktop\Facultate\An3\IP\Proiect_IP\DLL\ColorNameDLL\obj\Debug\ColorNameDLL.pdb

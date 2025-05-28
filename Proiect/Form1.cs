@@ -134,7 +134,8 @@ namespace Proiect
             _currentState.Enter(); 
         }
 
-        //---------GMI-----------/
+        //---------GMI / CRS----------- 
+        
         /// <summary>
         /// Obține asincron coordonatele geografice (latitudine, longitudine) pentru o adresă dată.
         /// Utilizează serviciul Nominatim (OpenStreetMap) pentru geocodare.
@@ -188,7 +189,7 @@ namespace Proiect
                 await _currentState.HandleCalculateRouteClickedAsync();
             }
         }
-        //---------GMI-----------/
+        //---------GMI / CRS-----------/
 
         /// <summary>
         /// Metodă publică pentru a declanșa manual calcularea rutei.
